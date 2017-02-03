@@ -1,0 +1,11 @@
+INPUT=$1
+FILE=$(mktemp)
+
+trap ctrl_c INT
+function ctrl_c() {
+  rm $FILE
+}
+
+qrencode -o ${FILE} $INPUT
+timeout 5 display $FILE
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /etc/php/7.0/cli/conf.d
+sudo rm 20-xdebug.ini

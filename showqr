@@ -1,0 +1,18 @@
+INPUT=$1
+FILE=$(mktemp)
+
+trap ctrl_c INT
+function ctrl_c() {
+  echo "cleanup"
+  rm $FILE
+  echo 'done?'
+
+}
+
+echo $FILE
+echo 'qr encode'
+qrencode -o ${FILE} $INPUT
+echo 'display'
+display $FILE
+echo 'after display'
+

@@ -1,0 +1,3 @@
+FILE=$(mktemp)
+xclip -selection clipboard $FILE
+rm $FILE
