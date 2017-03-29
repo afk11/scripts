@@ -1,2 +1,2 @@
-#!/bin/bvash
+#!/bin/bash
 touch .gitkeep && git add .gitkeep
