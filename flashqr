@@ -6,6 +6,6 @@ function ctrl_c() {
   rm $FILE
 }
 
-qrencode -o ${FILE} $INPUT
-timeout 5 display $FILE
+qrencode -o ${FILE} $INPUT -s 10
+timeout 15 display $FILE
 
