@@ -1,0 +1,21 @@
+function gofmldir () {
+    cd $GOPATH/src/$GOFML
+}
+
+function gofmlroot () {
+    cd $GOFMLROOT
+}
+
+function gofmlenv () {
+    cd $GOPATH
+}
+
+function gofmlproj() {
+if [ -z "$1" ]                           # Is parameter #1 zero length?
+   then
+     echo "Require a project name"
+     exit 1
+   else
+     cd $GOFMLROOT/$1/src
+   fi
+}
