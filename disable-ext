@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "$1" = "" ]; then
+    echo "should specify an extension"
+    exit -1;
+fi
+
+_PHP=7.1
+_EXT=$1
+[ "$2" != "" ] && _PHP=$2
+
+if [ -f /etc/php/$_PHP/cli/conf.d/20-$_EXT.ini ]; then
+   sudo rm /etc/php/$_PHP/cli/conf.d/20-$_EXT.ini
+fi
+

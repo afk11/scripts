@@ -1,4 +1,0 @@
-#!/bin/bash
-cd /etc/php/7.1/cli/conf.d
-sudo ln -s /etc/php/7.1/mods-available/xdebug.ini 20-xdebug.ini
-
