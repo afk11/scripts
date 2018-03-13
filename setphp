@@ -1,0 +1,6 @@
+php=$1
+sudo update-alternatives --set php /usr/bin/php$php
+sudo update-alternatives --set php-config /usr/bin/php-config$php
+sudo update-alternatives --set phpdbg /usr/bin/phpdbg$php
+sudo update-alternatives --set phpize /usr/bin/phpize$php
+
