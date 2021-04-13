@@ -1,0 +1,6 @@
+#!/bin/bash
+file="file=@"$1
+upload=$(curl --request POST --url 'https://www.virustotal.com/vtapi/v2/file/scan' --form "apikey=$APIKEY" --form "$file")
+sha256=$(echo $upload | jq -r '.sha256')
+report=$(curl --request GET --url "https://www.virustotal.com/vtapi/v2/file/report?apikey=$APIKEY&resource=$sha256")
+echo $report | jq

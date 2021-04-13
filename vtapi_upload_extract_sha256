@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DATA='{
+  "scan_id": "b2d7203660deb34818ba63e278787a5b03bd2e8ccc882701494e1e9df3a35612-1565047463",
+  "sha1": "124b81236968ba900375508e4c2c82d474d825ee",
+  "resource": "b2d7203660deb34818ba63e278787a5b03bd2e8ccc882701494e1e9df3a35612",
+  "response_code": 1,
+  "sha256": "b2d7203660deb34818ba63e278787a5b03bd2e8ccc882701494e1e9df3a35612",
+  "permalink": "https://www.virustotal.com/file/b2d7203660deb34818ba63e278787a5b03bd2e8ccc882701494e1e9df3a35612/analysis/1565047463/",
+  "md5": "ff55b4bca04bac734756dffeae0f7c4d",
+  "verbose_msg": "Scan request successfully queued, come back later for the report"
+}'
+echo $DATA | jq -r '.sha256'
+
